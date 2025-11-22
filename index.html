@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Andy Michel – Executive Tech Strategist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Andy Michel – Executive tech strategist at the intersection of AI, product, and systems. Building responsible, scalable intelligence for the real world."
+    />
+    <style>
+      :root {
+      --bg: #ffffff;
+      --bg-alt: #ffffff;
+      --fg: #0b0b0b;
+      --muted: #4f4f4f;
+      --accent: #111111;
+      --accent-soft: rgba(0, 0, 0, 0.06);
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --avatar: url("website_logo.jpg");
+      --radius-lg: 18px;
+      --radius-xl: 28px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.15);
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background: #ffffff;
+      color: var(--fg);
+      font-family: "Space Grotesk", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 32px 20px 48px;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid #e6e6e6;
+      box-shadow: var(--shadow-soft);
+      padding: 28px 24px 24px;
+      color: var(--fg);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 36px 32px 30px;
+      }
+    }
+
+    header {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 20% 0, #1a1a1a, #0f0f0f 60%, #0a0a0a 100%);
+      background-image: var(--avatar);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .profile-name {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0b0b0b;
+      line-height: 1.1;
+    }
+
+    nav {
+      display: none;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: flex;
+      }
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #000000;
+      border: 1px solid #1a1a1a;
+      color: #f6f6f6;
+      margin-bottom: 14px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        gap: 32px;
+        align-items: center;
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 4vw, 40px);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 480px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid #1a1a1a;
+      background: #000000;
+      color: #f6f6f6;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-panel {
+      border-radius: var(--radius-lg);
+      background: #000000;
+      border: 1px solid #1a1a1a;
+      padding: 14px 14px 12px;
+      font-size: 13px;
+      color: #f6f6f6;
+    }
+
+    .hero-panel-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .hero-panel-rows {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+
+    .hero-panel-tag {
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #0b0b0b;
+      border: 1px solid #e6e6e6;
+    }
+
+    .hero-panel-tag strong {
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .section {
+      border-radius: var(--radius-lg);
+      border: 1px solid #e6e6e6;
+      background: #ffffff;
+      padding: 18px 16px 16px;
+      margin-top: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 22px 20px 18px;
+      }
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      color: var(--muted);
+      opacity: 0.85;
+    }
+
+    .two-col {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .two-col {
+        grid-template-columns: 1.3fr 1.7fr;
+        gap: 24px;
+      }
+    }
+
+    .pill-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 13px;
+      color: #f6f6f6;
+    }
+
+    .pill-list li {
+      background: #000000;
+      border: 1px solid #1a1a1a;
+      border-radius: 14px;
+      padding: 12px 12px 11px;
+      color: #f6f6f6;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .pill-list strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .case-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    @media (min-width: 768px) {
+      .case-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .case {
+      border-radius: 14px;
+      background: #000000;
+      border: 1px solid #1a1a1a;
+      padding: 10px 10px 11px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: #f6f6f6;
+    }
+
+    .case-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: #c8c8c8;
+    }
+
+    .case-title {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .case-meta {
+      font-size: 11px;
+      color: #d7d7d7;
+    }
+
+    .writing-list {
+      list-style: none;
+      font-size: 13px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .writing-list li {
+      background: #000000;
+      border: 1px solid #1a1a1a;
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .writing-list a {
+      display: inline-block;
+      color: #f6f6f6;
+      text-decoration: none;
+    }
+
+    .writing-list a span {
+      color: #c8c8c8;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-right: 6px;
+    }
+
+    .writing-list a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .contact a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: #000000;
+      border: 1px solid #000000;
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+    }
+
+    .contact a:visited {
+      color: #ffffff;
+    }
+
+    .contact a:hover,
+    .contact a:focus-visible {
+      background: #111111;
+      border-color: #111111;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .footer {
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer span {
+      opacity: 0.85;
+    }
+
+    /* Simple fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .fade-in:nth-child(2) { animation-delay: 0.05s; }
+    .fade-in:nth-child(3) { animation-delay: 0.1s; }
+    .fade-in:nth-child(4) { animation-delay: 0.15s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <header>
+        <div class="brand">
+          <div class="logo-mark" aria-label="Profile photo placeholder"></div>
+          <div class="profile-name" aria-label="Your name">Dr. Andy Michel</div>
+        </div>
+        <nav>
+          <a href="#about">About</a>
+          <!-- <a href="#focus">Focus</a>
+          <a href="#work">Work</a> 
+          <a href="#writing">Writing</a>-->
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero fade-in" id="about">
+        <div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Executive Tech Strategist · AI, Product, Investing</span>
+          </div>
+          <h1 class="hero-title">
+            Building Human-Centered AI for the real world.
+          </h1>
+          <p class="hero-subtitle">
+            I’m a product and AI leader operating at the intersection of
+            <strong>generative AI, edge compute, and trust &amp; safety</strong>. 
+            I turn complex systems into <strong>clear strategy, shipped product, and scalable impact</strong>.
+          My work spans both the <strong>commercial sector and U.S. defense programs</strong>, helping teams build AI systems that are reliable, safe, and ready for real-world use.
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge">Agentic AI</span>
+            <span class="hero-badge">Trustworthy AI</span>
+            <span class="hero-badge">Hybrid AI</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-panel">
+            <div class="hero-panel-title">Current focus</div>
+            <div class="hero-panel-rows">
+              <span class="hero-panel-tag"><strong>Agentic Systems</strong> in Gaming</span>
+              <span class="hero-panel-tag"><strong>Safety &amp; Privacy </strong> On-device</span>
+              <span class="hero-panel-tag"><strong>Hybrid edge/cloud</strong> architectures</span>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-panel-title">How I operate</div>
+            <div class="hero-panel-rows">
+              <span class="hero-panel-tag">Translate research → strategy</span>
+              <span class="hero-panel-tag">Align product, engineering, &amp; business</span>
+              <span class="hero-panel-tag">Think in systems, ship for scale</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="focus">
+        <div class="section-header">
+          <h2 class="section-title">Brand pillars</h2>
+          <p class="section-kicker">What I’m trusted to own.</p>
+        </div>
+        <div class="two-col">
+          <ul class="pill-list">
+            <li>
+              <strong>Clarity & Executive Alignment</strong><br />
+              Providing the structure, narrative, and decision frameworks leaders need to move from ambiguity to action with confidence.
+            </li>
+            <li>
+              <strong>Trust &amp; Safety </strong><br />
+              Guardrails, governance, compliance and resilience treated as product features, not paperwork.
+            </li>
+            <li>
+              <strong>Hybrid Edge/Cloud AI Systems</strong><br />
+              Helping teams build AI that balances device-level intelligence with cloud-scale coordination, without breaking latency, privacy, or cost.
+            </li>
+          </ul>
+          <ul class="pill-list">
+            <li>
+              <strong>Frontier AI to Product Strategy</strong><br />
+              Turning rapid advances in generative and agentic AI into clear product direction, technical framing, and execution pathways while balancing regulatory developments.
+            </li>
+            <li>
+              <strong>Founder &amp; Venture Advisory</strong><br />
+             Helping founders and venture teams shape product strategy, validate technical bets, and navigate the rapidly evolving AI landscape.
+            </li>
+            <li>
+              <strong>Agentic Systems for Games & Interactive Worlds</strong><br />
+              Using game engines as a proving ground for autonomy, behavior modeling, and human–AI collaboration;translating those insights to production.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="work">
+        <div class="section-header">
+          <h2 class="section-title">Selected work</h2>
+          <p class="section-kicker">Representative problems I like to solve.</p>
+        </div>
+        <div class="case-grid">
+          <article class="case">
+            <div class="case-label">Real-Time Autonomous Decision Systems</div>
+            <div class="case-title">Aerospace </div>
+            <div class="case-meta">
+              Led R&D for advanced capabilities in F-35 &amp; F-16 that operate under tight latency, imperfect information, and real-world constraints.
+            </div>
+          </article>
+          <article class="case">
+            <div class="case-label">AI Systems for Commercial & Defense Use</div>
+            <div class="case-title">Dual-Use Technology </div>
+            <div class="case-meta">
+              Supported commercial product teams and U.S. defense programs in developing AI systems that are reliable, private, and operationally ready.
+            </div>
+          </article>
+          <article class="case">
+            <div class="case-label">Edge/Cloud Deployment Orchestration</div>
+            <div class="case-title">Hybrid AI</div>
+            <div class="case-meta">
+              Partnered with engineering and business leaders platforms that orchestrates AI workloads across device and cloud, giving a path to build and ship next-generation AI features.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section fade-in" id="writing">
+        <div class="section-header">
+          <h2 class="section-title">Passion Projects </h2>
+          <p class="section-kicker">Other interests</p>
+        </div>
+        <ul class="writing-list">
+          <li>
+            <a href="#" aria-label="From research to roadmap (coming soon)">
+              <span>Various Topics</span> Speaking Engagement & Writing
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Early-Stage Angel Investing (coming soon)">
+              <span>Emerging Tech</span> Early-Stage Angel Investing
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Community Development (coming soon)">
+              <span>Mentoring</span> Community Development
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section fade-in" id="contact">
+        <div class="section-header">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-kicker">Consultation, collaboration, or just a good conversation.</p>
+        </div>
+        <div class="contact">
+          <a id="email-link">Email</a>
+
+          <script>
+            const user = "michelandy.ma";
+            const domain = "gmail.com";
+            const link = document.getElementById("email-link");
+            const addr = `${user}@${domain}`;
+            link.href = `mailto:${addr}`;
+          </script>
+          
+          <a href="https://www.linkedin.com" target="https://www.linkedin.com/in/andymichel/" rel="noreferrer">LinkedIn</a>
+          <a href="https://substack.com/" target="https://substack.com/@theweekendbrew" rel="noreferrer">Substack</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>&copy; <span id="year"></span> Andy Michel.</span>
+        <span>andymichel.xyz</span>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
