@@ -8,6 +8,7 @@
       name="description"
       content="Andy Michel – Executive tech strategist at the intersection of AI, product, and systems. Building responsible, scalable intelligence for the real world."
     />
+   <meta name="google-site-verification" content="t90Y9sqgfRFMARR-JQAMsYfOA_K2xOMpbhcmIxZcJcU" />
     <style>
       :root {
       --bg: #ffffff;
@@ -145,7 +146,7 @@
     .hero {
       display: grid;
       gap: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     @media (min-width: 768px) {
@@ -173,7 +174,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 16px;
+      margin-top: 12px;
+      margin-bottom: 6px;
     }
 
     .hero-badge {
@@ -214,6 +216,47 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px 12px;
+    }
+
+    .edu-logos {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .edu-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .edu-logo {
+      width: 76px;
+      height: 40px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #e6e6e6;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 6px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      color: #0b0b0b;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .edu-logo-img {
+      width: 58px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .edu-note {
+      font-size: 12px;
+      font-weight: 600;
+      color: #ffffff;
     }
 
     .hero-panel-tag {
@@ -475,6 +518,7 @@
             <span class="hero-badge">Keynote Speaker</span>
             <span class="hero-badge">Consulting</span>
             <span class="hero-badge">Agentic AI</span>
+            <span class="hero-badge">Emerging Tech</span>
             <span class="hero-badge">Trustworthy AI</span>
             <span class="hero-badge">Hybrid AI</span>
           </div>
@@ -492,9 +536,32 @@
           <div class="hero-panel">
             <div class="hero-panel-title">How I operate</div>
             <div class="hero-panel-rows">
-              <span class="hero-panel-tag">Translate research → strategy</span>
+              <span class="hero-panel-tag">Translate R&D → Commercial</span>
               <span class="hero-panel-tag">Align product, engineering, &amp; business</span>
               <span class="hero-panel-tag">Think in systems, ship for scale</span>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-panel-title">Education</div>
+            <div class="hero-panel-rows edu-logos">
+              <div class="edu-row">
+                <span class="edu-logo">
+                  <img class="edu-logo-img" src="UCF-Seal-Logo.png" alt="UCF logo" />
+                </span>
+                <span class="edu-note">Doctor of Philosophy, AI</span>
+              </div>
+              <div class="edu-row">
+                <span class="edu-logo">
+                  <img class="edu-logo-img" src="Cornell_University_seal.svg.png" alt="Cornell logo" />
+                </span>
+                <span class="edu-note">M.S. SYS Engineering (Partial)</span>
+              </div>
+              <div class="edu-row">
+                <span class="edu-logo">
+                  <img class="edu-logo-img" src="florida-atlantic-logo-wordmark.png" alt="FAU logo" />
+                </span>
+                <span class="edu-note">Bachelor's, Web &amp; Databases  </span>
+              </div>
             </div>
           </div>
         </div>
@@ -559,7 +626,7 @@
           </article>
           <article class="case">
             <div class="case-label">Edge/Cloud Deployment Orchestration</div>
-            <div class="case-title">Hybrid AI</div>
+            <div class="case-title">Agentic &amp; Hybrid AI</div>
             <div class="case-meta">
               Partnered with engineering and business leaders platforms that orchestrates AI workloads across device and cloud, giving a path to build and ship next-generation AI features.
             </div>
@@ -575,7 +642,12 @@
         <ul class="writing-list">
           <li>
             <a href="#" aria-label="From research to roadmap (coming soon)">
-              <span>Various Topics</span> Speaking Engagement & Writing
+              <span>Keynote</span> Speaking Engagement 
+            </a>
+          </li>
+          <li>
+            <a href="https://theweekendbrew.substack.com/p/are-we-pointed-in-the-right-direction" target="_blank" aria-label="Community Development (coming soon)">
+              <span>Writing</span> Newsletter
             </a>
           </li>
           <li>
